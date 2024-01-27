@@ -3,6 +3,7 @@ import { Avatar, Box, Button, Icon, Link, Rating, Tab, Tabs, Typography } from "
 import React, { useState } from "react";
 import Chip from '@mui/material/Chip';
 import StickyHeadTable from './TableList'
+import '../src/style.css'
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -90,7 +91,7 @@ function BasicTabs({summary}) {
 }
 
 const OrderSummaryView = ({summary}) => {
-  return <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', flex: 1, gap: '24px', p: '12px' }}>
+  return <Box className="scrollBar_Hide" sx={{ width: '100%', display: 'flex', flexDirection: 'column', flex: 1, gap: '24px', p: '12px', scrollBehavior: 'smooth', scrollbarWidth: 'none', height: '465px', overflow: 'auto'  }}>
     <Box sx={{ backgroundColor: '#8080801A', borderRadius: '8px', p: '24px', width: '100%' }}>
 
       <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -198,8 +199,10 @@ const OrderSummaryView = ({summary}) => {
   </Box>;
 };
 
+
+
 const OrderDetailsPage = ({order}) => {
-  return <Box sx={{ boxShadow: '0px 1px 8px 0px rgba(0, 0, 0, 0.12)',marginTop: '7%', flexShrink: 0, width: '850px', display: 'flex', flexDirection: 'column', flex: 1, borderRadius: '8px', height: '788px', overflow: 'auto', scrollBehavior: 'smooth', scrollbarWidth: 'none' }}>
+  return <Box sx={{ boxShadow: '0px 1px 8px 0px rgba(0, 0, 0, 0.12)',marginTop: '7%', flexShrink: 0, width: '850px', display: 'flex', flexDirection: 'column', flex: 1, borderRadius: '8px', height: '788px'}}>
     <Box sx={{ backgroundColor: '#E8ECED', borderTopLeftRadius: '8px', borderTopRightRadius: '8px', padding: '24px' }}>
       <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>

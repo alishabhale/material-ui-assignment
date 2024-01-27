@@ -14,7 +14,7 @@ const OrderList = ({ orders, onOrderClick }) => {
         setSelectedOrderId(order.orderId);
       };
   return (
-    <div style={{ width: '519px', height: '860px', marginRight: '20px', marginTop: '3%',overflow: 'auto', scrollBehavior: 'smooth', scrollbarWidth: 'none'}}>
+    <div className="scrollBar_Hide" style={{ width: '519px', height: '860px', marginRight: '20px', marginTop: '3%',overflow: 'auto', scrollBehavior: 'smooth', scrollbarWidth: 'none'}}>
       <Box sx={{ zIndex: '4', borderRadius: '8px', padding: '14px', width: '100%' , position: 'fixed', backgroundColor: 'white'}}>
         <Box sx={{ top: '6%', position: 'sticky', top: 0, backgroundColor: '#ffffff', zIndex: 1, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5px', marginTop: '5px' }}>
           <Typography variant="h6" component="div" sx={{ fontWeight: '700', marginLeft: '10px', marginRight: '16px', fontSize: '13px', fontFamily: 'Inter', lineHeight: '17px', letterSpacing: '0.65px', textTransform: 'uppercase' }}>
