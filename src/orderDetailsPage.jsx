@@ -199,7 +199,7 @@ const OrderSummaryView = ({summary}) => {
 };
 
 const OrderDetailsPage = ({order}) => {
-  return <Box sx={{ boxShadow: '0px 1px 8px 0px rgba(0, 0, 0, 0.12)', flexShrink: 0, width: '850px', display: 'flex', flexDirection: 'column', flex: 1, borderRadius: '8px' }}>
+  return <Box sx={{ boxShadow: '0px 1px 8px 0px rgba(0, 0, 0, 0.12)',marginTop: '7%', flexShrink: 0, width: '850px', display: 'flex', flexDirection: 'column', flex: 1, borderRadius: '8px', height: '788px', overflow: 'auto', scrollBehavior: 'smooth', scrollbarWidth: 'none' }}>
     <Box sx={{ backgroundColor: '#E8ECED', borderTopLeftRadius: '8px', borderTopRightRadius: '8px', padding: '24px' }}>
       <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
@@ -275,7 +275,7 @@ const OrderDetailsPage = ({order}) => {
         </g>
       </svg>Actions</Button>
     </Box>
-    <Box sx={{ py: '8px', display: 'flex', gap: '32px', border: '1px solid #CDD6DB', borderLeftWidth: 0, borderRightWidth: 0, }}>
+    <Box sx={{ py: '8px', display: 'flex', gap: '32px'}}>
       <BasicTabs summary={order.summary}/>
     </Box>
   </Box>;

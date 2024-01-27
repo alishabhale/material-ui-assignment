@@ -266,6 +266,54 @@ export default function MiniDrawer() {
         }
       ]
     }
+    },
+    { orderId: 'EEE4907-0001990',
+    orderStatus : 'TQ',
+    orderName: 'HOTEL/TECH WORK SQUAD GFR',
+    dateRequested: new Date('2019-10-01'),
+    orderType: 'Services',
+    accountCode: '5830042',
+    accountName: 'HM PAX ACCOMODATION (LABOUR)',
+    logoUrl: 'https://dummyimage.com/500x400/00ff37/ffffff.png&text=RT',
+    orderSummaryLink: 'https://www.pitechniques.com/4907-00019/summary',
+    orderProgressLink: 'https://www.pitechniques.com/4907-00019/progress',
+    summary : {
+      component : [],
+      authorizedSupplier: {
+        authorizedSuppliersRefNumber : "ref: PR000001",
+        authorizedDate : "12 July 2019",
+        authorizedBy: "Alish Bhale",
+        invoiceChaseDate: "-",
+        POChasedDate: "-",
+        POConfirmedDate: "-",
+        PORefNo: "-",
+        manPower: 3,
+        address: "ABC road, Pune, 100001",
+        phoneNumber1: "8100000002",
+        phoneNumber2: "8100000001",
+        emailId: "repairs@services.com"
+      },
+      suppliers : [
+        {
+          "status" : "TQ9",
+          "supplierName" : "Engineer Co. Ltd",
+          "goods" : 3459.70,
+          "freight" : 0,
+          "total" : 3459.70,
+          "currency" : "EUR",
+          "base" : 3881.92
+        },
+        {
+          "status" : "TQ0",
+          "supplierName" : "Fintec Co. Ltd - Spares",
+          "goods" : 4370.6,
+          "freight" : 0,
+          "total" : 4370.6,
+          "currency" : "USD",
+          "base" : 4370.6
+        }
+      ]
+    }
     }
   ];
  
@@ -292,7 +340,7 @@ export default function MiniDrawer() {
   return (
 <div>
 <Dashboard open={dashboardOpen} onToggle={handleDashboardToggle} />
-  <div  style={{ display: 'flex', padding: '20px', marginTop: '5%' , marginLeft: dashboardOpen ? '' : '5%' }}>
+  <div  style={{ display: 'flex', padding: '20px' , marginLeft: dashboardOpen ? '' : '5%' }}>
   <OrderList orders={orders} onOrderClick={handleOrderClick} />
       {selectedOrder && (
           <OrderDetailsPage order={selectedOrder} />

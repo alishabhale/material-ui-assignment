@@ -14,19 +14,18 @@ const OrderList = ({ orders, onOrderClick }) => {
         setSelectedOrderId(order.orderId);
       };
   return (
-    <div style={{ width: '519px', height: '599px', marginRight: '20px' }}>
-    <Box sx={{ borderRadius: '8px', padding: '16px', width: '100%' }}>
-    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', gap: '8px' }}>
-            <Box sx={{ fontWeight: '700',marginLeft: '10px', marginRight: '16px', fontSize: '13px', fontFamily:'Inter', lineHeight: '17px',letterSpacing: '0.65px', textTransform: 'uppercase' }}>
-              ORDERS <Chip label={orders.length} />
-            </Box>
-          </Box>
+    <div style={{ width: '519px', height: '860px', marginRight: '20px', marginTop: '3%',overflow: 'auto', scrollBehavior: 'smooth', scrollbarWidth: 'none'}}>
+      <Box sx={{ zIndex: '4', borderRadius: '8px', padding: '14px', width: '100%' , position: 'fixed', backgroundColor: 'white'}}>
+        <Box sx={{ top: '6%', position: 'sticky', top: 0, backgroundColor: '#ffffff', zIndex: 1, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5px', marginTop: '5px' }}>
+          <Typography variant="h6" component="div" sx={{ fontWeight: '700', marginLeft: '10px', marginRight: '16px', fontSize: '13px', fontFamily: 'Inter', lineHeight: '17px', letterSpacing: '0.65px', textTransform: 'uppercase' }}>
+            ORDERS <Chip label={orders.length} />
+          </Typography>
+        </Box>
       </Box>
-      </Box>
+      <Box sx={{ marginTop: '15%', paddingRight: '2px'}}>
       {orders.map((order) => (
         <Card 
-        sx={{ backgroundColor:'#F5F5F5', aignSelf:'stretch', alignItems:'center', justifyContent: 'space-between',display: 'flex', flex: 1, marginLeft: '20px'}}
+        sx={{ backgroundColor:'#F5F5F5', aignSelf:'stretch', alignItems:'center', justifyContent: 'space-between',display: 'flex', flex: 1, marginLeft: '20px', marginTop: '-3px'}}
           key={order.orderId}
           onClick={() => handleCardClick(order)}
           style={{
@@ -49,7 +48,7 @@ const OrderList = ({ orders, onOrderClick }) => {
                         </Box>
                     </Box>
                 </Box>               
-                <Box sx={{ justifyContent: 'center' ,gap: '8px', display: 'flex', flexDirection: 'row', alignItems: 'end'}}>
+                <Box sx={{ zIndex: '2',justifyContent: 'center' ,gap: '8px', display: 'flex', flexDirection: 'row', alignItems: 'end'}}>
                     <Button variant="contained" color="primary" startIcon={<EditRounded />} onClick={() => { window.open(order.orderSummaryLink) }}>Edit Order</Button>
                     {/* <Box className="card_details">
                         <Box sx={{ fontSize: '14px' }}>{order.orderType}</Box>
@@ -66,6 +65,8 @@ const OrderList = ({ orders, onOrderClick }) => {
           </CardContent>
         </Card>
       ))}
+      </Box>
+
     </div>
   );
 };

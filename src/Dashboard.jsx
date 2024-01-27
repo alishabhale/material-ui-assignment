@@ -36,6 +36,7 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: 'hidden',
+  backgroundColor: '#052E2B',
   width: `calc(${theme.spacing(7)} + 1px)`,
   [theme.breakpoints.up('sm')]: {
     width: `calc(${theme.spacing(8)} + 1px)`,
@@ -47,6 +48,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
+  backgroundColor: 'transparent',
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
@@ -91,7 +93,7 @@ export default function MiniDrawer({onInboxClick}) {
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    setOpen(false);
   };
 
   const handleDrawerClose = () => {
@@ -108,7 +110,7 @@ export default function MiniDrawer({onInboxClick}) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar  sx={{left: '65px', backgroundColor: 'white', boxShadow: 'none'}}position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -120,17 +122,16 @@ export default function MiniDrawer({onInboxClick}) {
               ...(open && { display: 'none' }),
             }}
           >
-            <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography sx={{color: 'black'}}variant="h6" noWrap component="div">
           Procurement
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
+        <DrawerHeader  >
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+          <MenuIcon  sx={{color: 'white '}}/>
           </IconButton>
         </DrawerHeader>
         <Divider />
@@ -145,6 +146,7 @@ export default function MiniDrawer({onInboxClick}) {
                 minHeight: 48,
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
+                color: '#0ff2b2'
               }}
               onClick={() => {
                 if (text === 'Orders') {
@@ -157,6 +159,7 @@ export default function MiniDrawer({onInboxClick}) {
                     minWidth: 0,
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
+                    color: '#0ff2b2'
                   }}
                 >
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -182,6 +185,7 @@ export default function MiniDrawer({onInboxClick}) {
                     minWidth: 0,
                     mr: open ? 3 : 'auto',
                     justifyContent: 'center',
+                    color: '#0ff2b2'
                   }}
                 >
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
