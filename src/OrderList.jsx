@@ -18,7 +18,7 @@ const OrderList = ({ orders, onOrderClick }) => {
     <Box sx={{ borderRadius: '8px', padding: '16px', width: '100%' }}>
     <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', gap: '8px' }}>
-            <Box sx={{ fontWeight: '700', marginRight: '16px', fontSize: '13px', fontFamily:'Inter', lineHeight: '17px',letterSpacing: '0.65px', textTransform: 'uppercase' }}>
+            <Box sx={{ fontWeight: '700',marginLeft: '10px', marginRight: '16px', fontSize: '13px', fontFamily:'Inter', lineHeight: '17px',letterSpacing: '0.65px', textTransform: 'uppercase' }}>
               ORDERS <Chip label={orders.length} />
             </Box>
           </Box>
