@@ -1,3 +1,8 @@
+# Preview
+
+![image](https://github.com/alishabhale/material-ui-assignment/assets/44771856/14376b58-3571-44b3-b6bd-f6aa345d9f79)
+
+
 # Video
 
 
