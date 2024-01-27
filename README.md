@@ -1,10 +1,7 @@
 # Video
 
-https://github.com/alishabhale/material-ui-assignment/assets/44771856/b0d0f778-2af6-4ea1-a165-736e23b7762b
 
-Responsive 
-
-https://github.com/alishabhale/material-ui-assignment/assets/44771856/743e91ad-34c6-4a4e-96a7-ff2dc3e76016
+https://github.com/alishabhale/material-ui-assignment/assets/44771856/36ecdb71-7afb-4691-9c23-5130822cc0a4
 
 
 # Getting Started with Create React App
