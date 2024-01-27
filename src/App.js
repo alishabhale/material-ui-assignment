@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import { StyledEngineProvider } from '@mui/material/styles';
+import  Dashboard from './Dashboard'
+import  Dashboard1 from './Orders'
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.StrictMode>
+    <StyledEngineProvider injectFirst>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Dashboard />} />
+            <Route path="/dashboard1" element={<Dashboard1 />} />
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </StyledEngineProvider>
+  </React.StrictMode>
   );
 }
 
