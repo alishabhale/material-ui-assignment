@@ -136,18 +136,18 @@ export default function MiniDrawer({onInboxClick}) {
         <Divider />
         
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Orders', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               component={Link}
-              to={text === 'Inbox' ? '/dashboard1' : '/'}
+              to={text === 'Orders' ? '/orders' : '/'}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
               onClick={() => {
-                if (text === 'Inbox') {
+                if (text === 'Orders') {
                     handleInboxItemClick(); // Handle Inbox click as needed
                 }
               }}

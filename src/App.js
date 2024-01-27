@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { StyledEngineProvider } from '@mui/material/styles';
 import  Dashboard from './Dashboard'
-import  Dashboard1 from './Orders'
+import  Orders from './Orders'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Dashboard />} />
-            <Route path="/dashboard1" element={<Dashboard1 />} />
+            <Route path="/orders" element={<Orders/>} />
 
           </Route>
         </Routes>
